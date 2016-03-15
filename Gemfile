@@ -13,6 +13,9 @@ gem 'turbolinks'
 gem 'slim'
 gem 'slim-rails'
 gem 'autoprefixer-rails'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
 
 
 group :development, :test do

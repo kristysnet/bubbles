@@ -42,6 +42,13 @@ GEM
       json
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bitters (0.9.5)
+      bourbon (>= 3.1)
+      sass (>= 3.2)
+      thor
+    bourbon (3.1.8)
+      sass (>= 3.2.0)
+      thor
     builder (3.2.2)
     byebug (8.2.2)
     coffee-rails (4.1.1)
@@ -76,6 +83,9 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    neat (1.6.0)
+      bourbon (>= 3.1)
+      sass (>= 3.3)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.3)
@@ -153,11 +163,14 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bitters
+  bourbon
   byebug
   coffee-rails (~> 4.1.0)
   foreman
   jbuilder (~> 2.0)
   jquery-rails
+  neat
   pg
   rails (= 4.2.6)
   sass-rails (~> 5.0)
