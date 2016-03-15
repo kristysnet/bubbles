@@ -1,0 +1,15 @@
+= form_for [Goal.new] do |f|
+
+  .field-row
+    .field.required
+      = f.label :name
+      = f.text_field :name, placeholder: true
+    .field.required
+      = f.label :amount
+      = f.number_field :amount, in: 1..99
+    .field.required
+      = f.label :label
+      = f.select :label_id, options_from_collection_for_select(current_user.labels, :id, :name)
+
+  .submit-row
+    = f.submit

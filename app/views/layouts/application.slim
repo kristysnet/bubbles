@@ -6,4 +6,15 @@ html
     = csrf_meta_tags
 
   body
+    section.notifications
+      - [:error, :notice, :success].each do |alert|
+        - if flash[alert].present?
+          .manifold-notification class="alert-#{alert}"
+            .close
+            .message = flash[alert].html_safe
+            - if alert == :error && flash[:errors].present?
+              ul.messages
+              - flash[:errors].each do |key, err|
+                li
+                  = "#{key.capitalize} #{[err].flatten.join(' and ')}."
     = yield
