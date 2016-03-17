@@ -5,6 +5,7 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'jbuilder', '~> 2.0'
+gem 'responders', '~> 2.0'
 
 gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -16,7 +17,7 @@ gem 'autoprefixer-rails'
 gem 'bourbon'
 gem 'neat'
 gem 'bitters'
-
+gem 'select2-rails'
 
 group :development, :test do
   gem 'byebug'
