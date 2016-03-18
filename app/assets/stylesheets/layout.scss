@@ -1,0 +1,42 @@
+$max-width: 100%;
+body {
+  background: #f5f5f5;
+  margin: 0;
+
+  header {
+    @include outer-container;
+    padding: 1rem;
+    height: 4rem;
+    width: 100%;
+    @include radial-gradient(#64b3f4,#c2e59c);
+    background: #64b3f4;
+    color: #FFFFFF;
+    section.title {
+      @include span-columns(10);
+      @include omega;
+      .logo {
+        display: inline-block;
+        @include logo(contain, #000000);
+        width: 2rem;
+        height: 2rem;
+        margin: -0.5rem 0;
+      }
+      h1 {
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+    section.info {
+      @include span-columns(2);
+      @include omega;
+    }
+    section.notifications {
+
+      @include span-columns(12);
+    }
+  }
+  .content {
+
+  }
+}

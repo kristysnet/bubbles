@@ -6,6 +6,16 @@ html
     = csrf_meta_tags
 
   body
+    header
+      section.title
+        .logo
+        h1 Bubbles
+      section.info
+        a.user href="/account"
+          /.user-avatar style='background-image:url("#{current_user.avatar}");'
+          .user-greeting Hello, #{current_user.name}
+
+
     section.notifications
       - [:error, :notice, :success].each do |alert|
         - if flash[alert].present?
@@ -17,4 +27,5 @@ html
               - flash[:errors].each do |key, err|
                 li
                   = "#{key.capitalize} #{[err].flatten.join(' and ')}."
-    = yield
+    .content
+      = yield

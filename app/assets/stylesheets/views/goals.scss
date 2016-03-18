@@ -1,0 +1,17 @@
+ul.goals {
+  @include outer-container;
+  li.goal {
+    @include span-columns(3);
+    @include omega(4n);
+    border: solid #999999 0.3rem;
+    @include prefixer(border-radius, 60%, webkit mozilla microsoft opera spec);
+    background: #FFFFFF;
+    padding: 1rem;
+    min-height: 15rem;
+    h3 {
+      color: #999999;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}

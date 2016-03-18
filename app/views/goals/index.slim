@@ -1,7 +1,8 @@
-section.goals
+h2 Goals
+ul.goals
   - @goals.each do |goal|
-    .goal
-      h2= goal.name
+    li.goal
+      h3= goal.name
 
 
-  = render partial: 'new'
+= render partial: 'new'
