@@ -1,0 +1,4 @@
+li.goal
+  h3= goal.name
+  .progress= "#{goal.accomplishments.count} / #{goal.amount}"
+  = render partial: 'goal/accomplishments/new', locals: { goal: goal }

@@ -1,8 +1,7 @@
 h2 Goals
 ul.goals
   - @goals.each do |goal|
-    li.goal
-      h3= goal.name
+    = render partial: 'show', locals: { goal: goal }
 
 
 = render partial: 'new'
