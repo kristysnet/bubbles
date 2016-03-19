@@ -1,9 +1,5 @@
 class AccomplishmentsController < ApplicationController
-  #
-  # def index
-  #   @goals = current_user.goals
-  # end
-  #
+
   def create
     accomplishment = current_goal.accomplishments.build(accomplishment_params)
     if accomplishment.save
@@ -23,8 +19,7 @@ class AccomplishmentsController < ApplicationController
   private
 
   def accomplishment_params
-    # TODO determine time frame by week in year
-    { time_frame: '2016.11', user_id: @current_user.id }
+    { time_frame: goal_week, user_id: @current_user.id }
   end
 
 end

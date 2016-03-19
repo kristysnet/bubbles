@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
 
+  helper_method def goal_week
+    "#{Time.now.year}.#{Time.now.strftime('%W')}"
+  end
+
 end
