@@ -11,9 +11,12 @@ html
         .logo
         h1 Bubbles
       section.info
-        a.user href="/account"
-          /.user-avatar style='background-image:url("#{current_user.avatar}");'
-          .user-greeting Hello, #{current_user.name}
+        - if user_signed_in?
+          = link_to  "Hello, #{current_user.name}", edit_user_registration_path
+          = link_to 'Sign Out', :destroy_user_session, :method => :delete
+        - else
+          = link_to 'Sign In', :new_user_session
+          = link_to 'Sign Up', :new_user_registration
 
 
     section.notifications
