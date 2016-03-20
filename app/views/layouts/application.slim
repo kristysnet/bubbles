@@ -12,7 +12,7 @@ html
         h1 Bubbles
       section.info
         - if user_signed_in?
-          = link_to  "Hello, #{current_user.name}", edit_user_registration_path
+          = link_to  "Hello, #{current_user.name}", :edit_user_registration
           = link_to 'Sign Out', :destroy_user_session, :method => :delete
         - else
           = link_to 'Sign In', :new_user_session
@@ -22,7 +22,7 @@ html
     section.notifications
       - [:error, :notice, :success].each do |alert|
         - if flash[alert].present?
-          .manifold-notification class="alert-#{alert}"
+          .notification class="alert-#{alert}"
             .close
             .message = flash[alert].html_safe
             - if alert == :error && flash[:errors].present?
@@ -30,5 +30,5 @@ html
               - flash[:errors].each do |key, err|
                 li
                   = "#{key.capitalize} #{[err].flatten.join(' and ')}."
-    .content
+    section.content
       = yield

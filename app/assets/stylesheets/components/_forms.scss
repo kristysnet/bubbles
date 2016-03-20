@@ -1,0 +1,43 @@
+form {
+  margin-top: 1rem;
+  .field-row {
+    @include outer-container;
+    max-width: 100%;
+    margin: 0;
+    &.single {
+      @include span-columns(1 of 1);
+      float: none;
+    }
+    .field {
+      @include span-columns(2 of 4);
+      &.required {
+        label:before {
+          content: '*';
+        }
+      }
+    }
+  }
+  textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple=multiple] {
+    margin-bottom: 0;
+  }
+  label {
+    margin: 0.75rem 0;
+  }
+  .actions {
+    margin: 0.75rem 0;
+  }
+  #error_explanation {
+    padding: 0.5rem;
+    background: $error-color;
+    color: darken($error-color, 60);
+    h2 {
+      font-size: 1rem;
+    }
+    ul {
+      li {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+}

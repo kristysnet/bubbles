@@ -31,12 +31,23 @@ body {
       @include span-columns(2);
       @include omega;
     }
-    section.notifications {
+  }
+  section.notifications {
+    @include span-columns(12);
+    .notification {
+      &.alert-notice {
+        @extend %flash-notice;
+      }
+      &.alert-error {
+        @extend %flash-error;
+      }
 
-      @include span-columns(12);
+      &.alert-success {
+        @extend %flash-success;
+      }
     }
   }
-  .content {
-
+  section.content {
+    margin: 1rem;
   }
 }
