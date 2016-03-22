@@ -4,7 +4,7 @@ form {
     @include outer-container;
     max-width: 100%;
     margin: 0;
-    &.single {
+    &.single  .field {
       @include span-columns(1 of 1);
       float: none;
     }
@@ -22,6 +22,9 @@ form {
   }
   label {
     margin: 0.75rem 0;
+  }
+  i {
+   font-size: 0.75rem;
   }
   .actions {
     margin: 0.75rem 0;

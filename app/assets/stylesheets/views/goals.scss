@@ -1,17 +1,33 @@
 ul.goals {
   @include outer-container;
-  li.goal {
+  li {
     @include span-columns(3);
     @include omega(4n);
-    border: solid #999999 0.3rem;
-    @include prefixer(border-radius, 60%, webkit mozilla microsoft opera spec);
-    background: #FFFFFF;
-    padding: 1rem;
-    min-height: 15rem;
-    h3 {
-      color: #999999;
-      font-size: 1rem;
-      text-align: center;
+    &.goal {
+      border: solid #999999 0.3rem;
+      @include prefixer(border-radius, 60%, webkit mozilla microsoft opera spec);
+      background: #FFFFFF;
+      padding: 1rem;
+      min-height: 15rem;
+      h3 {
+        color: #999999;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+    &.create_goal {
+      select#goal_label_id {
+        width: 100%;
+      }
+      label {
+        margin: 0.5rem 0 0 0;
+      }
+      .select2-container {
+        width: 100%;
+      }
+      button.add_new {
+        white-space: normal;
+      }
     }
   }
 }

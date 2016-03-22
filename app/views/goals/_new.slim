@@ -1,15 +1,18 @@
 = form_for [Goal.new] do |f|
 
-  .field-row
+  .field-row.single
     .field.required
       = f.label :name
       = f.text_field :name, placeholder: true
+  .field-row.single
     .field.required
       = f.label :amount
       = f.number_field :amount, in: 1..99
+  .field-row.single
     .field.required
       = f.label :label
       = f.select :label_id, options_from_collection_for_select(current_user.labels, :id, :name)
+      i= '(Choose an existing label, or create a new one)'
 
   .submit-row
     = f.submit

@@ -2,16 +2,16 @@ ready = ->
   console.log $("#goal_label_id")
 
   $("#goal_label_id").select2(
-    placeholder: "Select a label"
-    allowClear: true
+    placeholder: "Choose or create a label"
+    allowClear: false
     formatNoMatches: (term) ->
-      "<button class=\"addNew\" data-term=\"#{term}\">Add '#{term}' as New Label</button>"
+      "<button class=\"add_new\" data-term=\"#{term}\">Add '#{term}' as New Label</button>"
   )
 
-  $('.select2-drop').on 'click', '.addNew', -> addLabel()
+  $('.select2-drop').on 'click', '.add_new', -> addLabel()
 
 addLabel = ->
-  term = $('.addNew').data('term')
+  term = $('.add_new').data('term')
   $.ajax
     url: '/labels'
     type:   'POST'
