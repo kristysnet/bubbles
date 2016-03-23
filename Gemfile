@@ -9,6 +9,7 @@ gem 'responders', '~> 2.0'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
+gem 'googlecharts'
 
 gem 'sass-rails'
 gem 'coffee-rails', '~> 4.1.0'

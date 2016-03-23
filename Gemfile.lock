@@ -76,6 +76,7 @@ GEM
       thor (~> 0.19.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    googlecharts (1.6.12)
     hashie (3.4.3)
     i18n (0.7.0)
     jbuilder (2.4.1)
@@ -209,6 +210,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   foreman
+  googlecharts
   jbuilder (~> 2.0)
   jquery-rails
   neat

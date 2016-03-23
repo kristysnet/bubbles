@@ -1,4 +1,6 @@
 li.goal
-  h3= goal.name
-  .progress= "#{goal.accomplishments.in_time_frame(goal_week).count} / #{goal.amount}"
+  - first_slice = goal.accomplishments.in_time_frame(goal_week).count
+  - second_slice = goal.amount - first_slice
+  img src=Gchart.pie(:title => goal.name, :labels => %w(completed incomplete), :data => [first_slice, second_slice])
+  /.progress= "#{goal.accomplishments.in_time_frame(goal_week).count} / #{goal.amount}"
   = render partial: 'goal/accomplishments/new', locals: { goal: goal }
